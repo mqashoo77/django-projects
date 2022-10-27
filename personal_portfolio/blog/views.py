@@ -1,8 +1,6 @@
-import re
 from django.shortcuts import render
 
 # Create your views here.
-from django.shortcuts import render
 from blog.models import Post, Comment
 from .forms import  CommentForm
 
@@ -41,8 +39,8 @@ def blog_detail(request, pk):
 
     comments = Comment.objects.filter(post=post)
     context = {
-    "post": post,
-    "comments": comments,
-    "form": form, 
+        "post": post,
+        "comments": comments,
+        "form": form, 
     }
     return render(request, "blog_detail.html", context)
