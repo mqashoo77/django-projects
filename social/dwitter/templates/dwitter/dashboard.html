@@ -3,7 +3,7 @@
 {% block content %}
 <div class="column">
 {% for followed in user.profile.follows.all %}
-{% for dweet in followed.user.dweets.all %}
+{% for dweet in dweets %}
 <div class="box">
 {{dweet.body}}
 <span class="is-small has-text-grey-light">
